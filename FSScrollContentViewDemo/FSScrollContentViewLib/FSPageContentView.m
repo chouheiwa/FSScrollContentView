@@ -36,6 +36,14 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
     return self;
 }
 
+- (void)setupChildVCs:(NSArray *)childVCs parentVC:(UIViewController *)parentVC delegate:(id<FSPageContentViewDelegate>)delegate {
+    self.parentVC = parentVC;
+    self.childsVCs = childVCs;
+    self.delegate = delegate;
+    
+    [self setupSubViews];
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
