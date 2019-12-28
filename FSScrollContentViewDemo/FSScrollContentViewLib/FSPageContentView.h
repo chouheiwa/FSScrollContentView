@@ -61,6 +61,8 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame childVCs:(NSArray *)childVCs parentVC:(UIViewController *)parentVC delegate:(id<FSPageContentViewDelegate>)delegate;
 
+- (void)setupChildVCs:(NSArray *)childVCs parentVC:(UIViewController *)parentVC delegate:(id<FSPageContentViewDelegate>)delegate;
+
 @property (nonatomic, weak) id<FSPageContentViewDelegate>delegate;
 
 /**
