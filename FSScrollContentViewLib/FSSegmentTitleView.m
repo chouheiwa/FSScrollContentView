@@ -37,6 +37,16 @@
     }
     return self;
 }
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self initWithProperty];
+}
+
+- (void)setupTitles:(NSArray *)titlesArr delegate:(id<FSSegmentTitleViewDelegate>)delegate indicatorType:(FSIndicatorType)incatorType {
+    self.titlesArr = titlesArr;
+    self.delegate = delegate;
+    self.indicatorType = incatorType;
+}
 //初始化默认属性值
 - (void)initWithProperty
 {
